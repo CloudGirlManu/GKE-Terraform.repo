@@ -3,7 +3,7 @@ module "gke" {
   project_id                 = var.project_id
   name                       = var.gke_cluster_name
   region                     = var.region
-  regional = var.regional
+  regional                   = var.regional
   zones                      = var.gke_zones
   network                    = var.network
   subnetwork                 = var.subnetwork
@@ -16,21 +16,21 @@ module "gke" {
 
   node_pools = [
     {
-      name                      = var.gke_nodepool_name
-      machine_type              = "e2-medium"
-      node_locations            = var.node_location
-      min_count                 = 2
-      max_count                 = 3
-      local_ssd_count           = 0
-      disk_size_gb              = 100
-      disk_type                 = "pd-standard"
-      image_type                = "COS_CONTAINERD"
-      enable_gcfs               = false
-      auto_repair               = true
-      auto_upgrade              = true
-      service_account           = var.gke_service_account
-      preemptible               = true
-      initial_node_count        = 2
+      name               = var.gke_nodepool_name
+      machine_type       = "e2-medium"
+      node_locations     = var.node_location
+      min_count          = 2
+      max_count          = 3
+      local_ssd_count    = 0
+      disk_size_gb       = 100
+      disk_type          = "pd-standard"
+      image_type         = "COS_CONTAINERD"
+      enable_gcfs        = false
+      auto_repair        = true
+      auto_upgrade       = true
+      service_account    = var.gke_service_account
+      preemptible        = true
+      initial_node_count = 2
     },
   ]
 
