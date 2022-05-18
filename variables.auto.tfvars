@@ -1,0 +1,11 @@
+gcp_credentials = "service-account.json"
+gke_zones = ["europe-central2-b"]
+region = "europe-central2"
+project_id = "gke-terraform-350414"
+network = "default"
+subnetwork = "default"
+gke_nodepool_name = "default-node-pool"
+node_location = "europe-central2-b"
+gke_service_account = "gke-terraform-sa@gke-terraform-350414.iam.gserviceaccount.com"
+gke_cluster_name = "example-cluster"
+regional = "false"
